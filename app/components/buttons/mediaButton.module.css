@@ -1,0 +1,11 @@
+.MediaButton {
+  margin: 5px;
+  width: 3rem;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.MediaButton:hover .icon {
+  color: var(--primary-color);
+}
