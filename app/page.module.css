@@ -52,3 +52,21 @@
   align-items: center;
   margin-top: 30px;
 }
+
+/* Super Wide Screens */
+@media screen and (min-width: 1964px) {
+}
+
+/*Tablet*/
+@media screen and (max-width: 800px) {
+  .HeadingContainer {
+    margin-top: 90px;
+  }
+}
+
+/*Mobile*/
+@media screen and (max-width: 640px) {
+  .HeadingContainer {
+    margin-top: 20px;
+  }
+}

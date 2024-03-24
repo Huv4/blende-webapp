@@ -76,3 +76,15 @@ button {
     color-scheme: dark;
   }
 }
+
+/* Super Wide Screens */
+@media screen and (min-width: 100px) {
+}
+
+/*Tablet*/
+@media screen and (max-width: 800px) {
+}
+
+/*Mobile*/
+@media screen and (max-width: 640px) {
+}
