@@ -1,0 +1,41 @@
+.DefaultContainer {
+  max-width: var(--max-width);
+}
+
+.HeaderGrid {
+  display: grid;
+}
+
+.HeaderGrid div {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.HeadingContainer {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  align-self: start;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#WebsiteHeading {
+  color: var(--primary-color);
+}
+
+.HeaderImageContaier {
+}
+
+.BannerImage {
+  opacity: 97%;
+}
+
+#HeaderImage {
+  width: 100%;
+  height: auto;
+}
