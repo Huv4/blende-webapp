@@ -1,9 +1,10 @@
 .MediaButton {
   margin: 5px;
   border-radius: var(--border-radius);
-  width: 3rem;
   background-color: var(--primary-color);
   border-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: 3rem;
   transition: 0.3s;
 }
 

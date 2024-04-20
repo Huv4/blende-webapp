@@ -32,7 +32,7 @@ export default function Home() {
                   <Image
                     className={styles.BannerImage}
                     id={styles.HeaderImage}
-                    src="https://ik.imagekit.io/photoggang/Blende17/HomepagePics/header_image.jpg"
+                    src="https://ik.imagekit.io/photoggang/Blende17/HomePage/TitleImage.jpg"
                     alt="Sonnenuntergang in der Sächsischen Schweiz"
                     width={7952}
                     height={2922}
