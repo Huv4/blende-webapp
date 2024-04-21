@@ -14,10 +14,7 @@ const MediaButton: React.FC<MediaButtonProps> = ({ faIcon, imageLink }) => {
   return (
     <div className={styles.ButtonContainer}>
       <Link href={imageLink} target="_blank">
-        <button
-          type="button"
-          className={["btn btn-light", styles.MediaButton].join(" ")}
-        >
+        <button type="button" className={styles.MediaButton}>
           <FontAwesomeIcon icon={faIcon} className={styles.icon} />
         </button>
       </Link>

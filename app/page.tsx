@@ -28,7 +28,7 @@ export default function Home() {
                 <div className={styles.HeadingContainer}>
                   <h1 id={styles.WebsiteHeading}>Blende 1.7</h1>
                 </div>
-                <div className={styles.HeaderImageContainer}>
+                <div className={styles.HeadserImageContainer}>
                   <Image
                     className={styles.BannerImage}
                     id={styles.HeaderImage}

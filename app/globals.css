@@ -1,3 +1,8 @@
+/* globals.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 :root {
   --max-width: 1964px;
   --border-radius: 5px;
@@ -66,9 +71,6 @@ p {
   color: var(--secondary-color);
   font-weight: 300;
   font-size: 1.5rem;
-}
-
-button {
 }
 
 @media (prefers-color-scheme: dark) {
