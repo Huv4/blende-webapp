@@ -6,11 +6,7 @@ import { draftMode } from "next/headers";
 
 export async function generateStaticParams() {
   const allArticles = await getAllArticles();
-  if (!allArticles || allArticles.length === 0) {
-    console.error("No articles found or getAllArticles returned undefined");
-    return []; // Return an empty array or handle the error as needed
-  }
-  return allArticles.map((article) => ({
+  return allArticles?.map((article) => ({
     slug: article.slug,
   }));
 }
