@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import titleImage from "../public/landingPageImg/titleImage.jpg";
 
 import MediaButton from "./components/buttons/mediaButton";
 
@@ -32,10 +33,8 @@ export default function Home() {
                   <Image
                     className={styles.BannerImage}
                     id={styles.HeaderImage}
-                    src="https://ik.imagekit.io/photoggang/Blende17/HomePage/TitleImage.jpg"
-                    alt="Sonnenuntergang in der Sächsischen Schweiz"
-                    width={7952}
-                    height={2922}
+                    src={titleImage}
+                    alt="Thüringer Wald im Nebel versunken"
                     priority
                   />
                 </div>
