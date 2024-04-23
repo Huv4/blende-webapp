@@ -24,24 +24,31 @@ export default function Home() {
     <>
       <body>
         <header>
-          <section>
-            <nav>
+          <section className="relative w-full h-screen">
+            <nav className="relative z-50">
               <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
                 <Link
                   href="https://blendeeinssieben.vercel.app/"
-                  className="flex items-center space-x-3"
+                  className="flex items-center space-x-1"
                 >
                   <Image
                     src={logo}
                     alt="Blendeeinssieben Logo"
-                    className="w-8"
+                    className="w-7 sm:w-9 lg:w-10"
                   ></Image>
-                  <span className="self-center font-sans font-extralight whitespace-nowrap">
-                    Blendeeinssieben
+                  <span className="self-center font-sans font-extralight text-xs text-white sm:text-sm lg:text-base  whitespace-nowrap">
+                    Blende 1.7
                   </span>
                 </Link>
               </div>
             </nav>
+            <div className="absolute top-0">
+              <Image
+                src={titleImage}
+                alt="Thüringer Wald verschwindet im Nebel"
+                priority
+              ></Image>
+            </div>
           </section>
         </header>
         <main></main>
