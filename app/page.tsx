@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import titleImage from "../public/landingPageImg/titleImage.jpg";
-
+import logo from "../public/Logos/BlendeeinsiebenLogoWebsite.svg";
 import MediaButton from "./components/buttons/mediaButton";
+
+import styles from "./page.module.css";
 
 export default function Home() {
   const MediaButtonProps = [
@@ -23,21 +25,24 @@ export default function Home() {
       <body>
         <header>
           <section>
-            <div className="">
-              <div className="">
-                <div className="">
-                  <h1>Blende 1.7</h1>
-                </div>
-                <div className="">
-                  <Image
-                    className=""
-                    src={titleImage}
-                    alt="Thüringer Wald im Nebel versunken"
-                    priority
-                  />
-                </div>
+            <nav>
+              <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+                <Link
+                  href="https://blendeeinssieben.vercel.app/"
+                  className="flex items-center space-x-3"
+                >
+                  <div className="">
+                    <Image
+                      src={logo}
+                      alt="Blendeeinssieben Logo"
+                      className="w-8"
+                    ></Image>
+                  </div>
+
+                  <span className="text-black">Blendeeinssieben</span>
+                </Link>
               </div>
-            </div>
+            </nav>
           </section>
         </header>
         <main></main>
