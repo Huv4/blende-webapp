@@ -3,8 +3,6 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-import styles from "./mediaButton.module.css";
-
 interface MediaButtonProps {
   faIcon: IconDefinition;
   imageLink: string;
@@ -12,10 +10,10 @@ interface MediaButtonProps {
 
 const MediaButton: React.FC<MediaButtonProps> = ({ faIcon, imageLink }) => {
   return (
-    <div className={styles.ButtonContainer}>
+    <div className="">
       <Link href={imageLink} target="_blank">
-        <button type="button" className={styles.MediaButton}>
-          <FontAwesomeIcon icon={faIcon} className={styles.icon} />
+        <button type="button" className="">
+          <FontAwesomeIcon icon={faIcon} className="" />
         </button>
       </Link>
     </div>

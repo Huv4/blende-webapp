@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -24,39 +23,19 @@ export default function Home() {
       <body>
         <header>
           <section>
-            <div className={styles.DefaultContainer}>
-              <div className={styles.HeaderGrid}>
-                <div className={styles.HeadingContainer}>
-                  <h1 id={styles.WebsiteHeading}>Blende 1.7</h1>
+            <div className="">
+              <div className="">
+                <div className="">
+                  <h1>Blende 1.7</h1>
                 </div>
-                <div className={styles.HeadserImageContainer}>
+                <div className="">
                   <Image
-                    className={styles.BannerImage}
-                    id={styles.HeaderImage}
+                    className=""
                     src={titleImage}
                     alt="Thüringer Wald im Nebel versunken"
                     priority
                   />
                 </div>
-              </div>
-            </div>
-          </section>
-          <section className={styles.WhiteSection}>
-            <div className={styles.DefaultContainer}>
-              <div>
-                <p id={styles.ThisIsUs}>
-                  Wir fünf möchten unsere Begeisterung fürs Fotografieren
-                  untereinander und gerne auch mit euch teilen.
-                </p>
-              </div>
-              <div className={styles.SocialMediaContainer}>
-                {MediaButtonProps.map((property, index) => (
-                  <MediaButton
-                    key={index}
-                    faIcon={property.icon}
-                    imageLink={property.link}
-                  />
-                ))}
               </div>
             </div>
           </section>

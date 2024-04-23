@@ -3,7 +3,10 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
 export const metadata: Metadata = {
   title: "Blende 1.7",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={montserrat.className}>
+      <body className={`${montserrat.variable} font-mono`}>
         {children}
         <Analytics />
       </body>
