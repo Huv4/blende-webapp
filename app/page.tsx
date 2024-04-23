@@ -31,15 +31,14 @@ export default function Home() {
                   href="https://blendeeinssieben.vercel.app/"
                   className="flex items-center space-x-3"
                 >
-                  <div className="">
-                    <Image
-                      src={logo}
-                      alt="Blendeeinssieben Logo"
-                      className="w-8"
-                    ></Image>
-                  </div>
-
-                  <span className="text-black">Blendeeinssieben</span>
+                  <Image
+                    src={logo}
+                    alt="Blendeeinssieben Logo"
+                    className="w-8"
+                  ></Image>
+                  <span className="self-center font-sans font-extralight whitespace-nowrap">
+                    Blendeeinssieben
+                  </span>
                 </Link>
               </div>
             </nav>

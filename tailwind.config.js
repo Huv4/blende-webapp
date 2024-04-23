@@ -32,10 +32,12 @@ module.exports = {
       gray: "#8492a6",
       "gray-light": "#d3dce6",
     },
-    fontFamily: {
-      mono: ["var(--font-montserrat)"],
-    },
+
     extend: {
+      fontFamily: {
+        sans: ["var(--font-montserrat)"],
+        serif: ["var(--font-montserrat-alternates)"],
+      },
       spacing: {
         128: "32rem",
         144: "36rem",

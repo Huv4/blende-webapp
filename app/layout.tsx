@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-montserrat",
+});
+
+const montserrat_alternates = Montserrat_Alternates({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "100",
+  variable: "--font-montserrat-alternates",
 });
 
 export const metadata: Metadata = {
@@ -19,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
-      <body className={`${montserrat.variable} font-mono`}>
+    <html
+      lang="de"
+      className={`${montserrat.variable} ${montserrat_alternates.variable}`}
+    >
+      <body>
         {children}
         <Analytics />
       </body>
