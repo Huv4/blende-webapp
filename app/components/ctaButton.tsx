@@ -11,7 +11,7 @@ const ctaButton: React.FC<CTAButtonProps> = ({ text }) => {
       <Link href="/geschichten">
         <button
           type="button"
-          className="text-sm  text-white text-opacity-25 hover:text-deer"
+          className="text-sm text-white text-opacity-35 p-1 mt-5 border rounded-xl border-current hover:text-deer hover:border-deer"
         >
           {text}
         </button>

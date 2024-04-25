@@ -20,12 +20,12 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="absolute top-0 z-10">
+              <div className="absolute top-0.5 z-10">
                 <Navbar />
               </div>
             </div>
             <div className="absolute bottom-1/2 z-10 text-white font-light p-7 dark:text-black">
-              <h2 className="text-xs text-white font-semibold text-opacity-25 -mt-1">
+              <h2 className="text-sm text-white font-semibold text-opacity-35 -mt-1">
                 fotokollektionen
               </h2>
 
