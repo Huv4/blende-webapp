@@ -1,4 +1,4 @@
-import { getArticle } from "@/lib/api";
+import { getStory } from "@/lib/api";
 import { draftMode } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -15,12 +15,12 @@ export async function GET(request) {
     return new Response("Invalid token", { status: 401 });
   }
 
-  const article = await getArticle(slug);
+  const story = await getStory(slug);
 
-  if (!article) {
-    return new Response("Article not found", { status: 404 });
+  if (!story) {
+    return new Response("Story not found", { status: 404 });
   }
 
   draftMode().enable();
-  redirect(`/articles/${article.slug}`);
+  redirect(`/storys/${story.slug}`);
 }
