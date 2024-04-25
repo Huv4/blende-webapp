@@ -32,7 +32,7 @@ export default function Home() {
               <h1 className="text-l font-normal">
                 Bilder die Geschichten erzählen.
               </h1>
-              <p className="text-sm text-justify">
+              <p className="text-sm text-justify md:max-w-lg">
                 Durchstöbere unsere Kollektionen, finde neue Perspektiven und
                 lass dich von den vielfältigen Geschichten hinter jedem Bild
                 faszinieren.
