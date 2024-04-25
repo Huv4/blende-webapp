@@ -5,7 +5,10 @@ import Link from "next/link";
 const Logo = () => {
   return (
     <div>
-      <Link href="https://blendeeinssieben.vercel.app">
+      <Link
+        href="https://blendeeinssieben.vercel.app"
+        className=" hover:text-deer"
+      >
         <span>Blende 1.7</span>
       </Link>
     </div>

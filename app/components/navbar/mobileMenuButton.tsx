@@ -12,15 +12,15 @@ type MobileMenuButtonProps = {
 
 const MobileMenuButton = ({ isOpen, toggleMenu }: MobileMenuButtonProps) => {
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden hover:text-deer">
       <button onClick={toggleMenu}>
         {isOpen ? (
           <div>
-            <FontAwesomeIcon icon={faBars} stroke="currentColor" />
+            <FontAwesomeIcon icon={faGripLines} stroke="currentColor" />
           </div>
         ) : (
           <div>
-            <FontAwesomeIcon icon={faGripLines} stroke="currentColor" />
+            <FontAwesomeIcon icon={faBars} stroke="currentColor" />
           </div>
         )}
       </button>

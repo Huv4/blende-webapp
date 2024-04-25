@@ -1,8 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import titleImage from "../public/landingPageImg/titleImage.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faGripLines } from "@fortawesome/free-solid-svg-icons";
+import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
 
@@ -21,9 +20,24 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="absolute top-0 z-1">
+              <div className="absolute top-0 z-10">
                 <Navbar />
               </div>
+            </div>
+            <div className="absolute bottom-1/2 z-10 text-white font-light p-7 dark:text-black">
+              <h2 className="text-xs text-white font-semibold text-opacity-25 -mt-1">
+                fotokollektionen
+              </h2>
+
+              <h1 className="text-l font-normal">
+                Bilder die Geschichten erzählen.
+              </h1>
+              <p className="text-sm text-justify">
+                Durchstöbere unsere Kollektionen, finde neue Perspektiven und
+                lass dich von den vielfältigen Geschichten hinter jedem Bild
+                faszinieren.
+              </p>
+              <CtaButton text="unsere Favoriten &rarr;" />
             </div>
           </section>
         </header>
