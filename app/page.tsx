@@ -24,7 +24,7 @@ export default function Home() {
                 <Navbar />
               </div>
             </div>
-            <div className="absolute bottom-1/3 z-10 text-white font-light p-7 dark:text-black">
+            <div className="absolute bottom-1/3 z-10 text-white font-light p-7 lg:bottom-1/2 dark:text-black">
               <h2 className="text-sm text-white font-semibold text-opacity-35 -mt-1">
                 fotokollektionen
               </h2>
