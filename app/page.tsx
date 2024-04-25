@@ -8,7 +8,7 @@ import Navbar from "./components/navbar/navBar";
 export default function Home() {
   return (
     <>
-      <body>
+      <body className="bg-white dark:bg-black">
         <header>
           <section className="w-full h-screen flex">
             <div className="relative h-full z-0">
@@ -24,7 +24,7 @@ export default function Home() {
                 <Navbar />
               </div>
             </div>
-            <div className="absolute bottom-1/3 z-10 text-white font-light p-7 lg:bottom-1/2 dark:text-black">
+            <div className="absolute bottom-1/3 z-10 text-white p-7 lg:bottom-1/2 dark:text-black">
               <h2 className="text-sm text-white font-semibold text-opacity-35 -mt-1">
                 fotokollektionen
               </h2>
@@ -32,7 +32,7 @@ export default function Home() {
               <h1 className="text-l font-normal">
                 Bilder die Geschichten erzählen.
               </h1>
-              <p className="text-sm text-justify md:max-w-lg">
+              <p className="text-sm text-justify font-light md:max-w-lg">
                 Durchstöbere unsere Kollektionen, finde neue Perspektiven und
                 lass dich von den vielfältigen Geschichten hinter jedem Bild
                 faszinieren.
@@ -41,7 +41,15 @@ export default function Home() {
             </div>
           </section>
         </header>
-        <main></main>
+        <main>
+          <section className="w-full h-screen flex p-7 pt-0 -mt-20 text-black dark:text-white">
+            <div>
+              <h1 className="text-l font-normal">
+                Unsere Geschichten und Kollektionen
+              </h1>
+            </div>
+          </section>
+        </main>
       </body>
     </>
   );
