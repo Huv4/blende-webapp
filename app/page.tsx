@@ -24,7 +24,7 @@ export default function Home() {
                 <Navbar />
               </div>
             </div>
-            <div className="absolute bottom-1/2 z-10 text-white font-light p-7 dark:text-black">
+            <div className="absolute bottom-1/3 z-10 text-white font-light p-7 dark:text-black">
               <h2 className="text-sm text-white font-semibold text-opacity-35 -mt-1">
                 fotokollektionen
               </h2>
@@ -37,7 +37,7 @@ export default function Home() {
                 lass dich von den vielfältigen Geschichten hinter jedem Bild
                 faszinieren.
               </p>
-              <CtaButton text="unsere Favoriten &rarr;" />
+              <CtaButton text="unsere Favoriten" />
             </div>
           </section>
         </header>
