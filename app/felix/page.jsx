@@ -22,7 +22,7 @@ export default async function Home() {
                     alt="placeholder"
                     className="aspect-[4/3] object-cover w-full"
                     height="263"
-                    src={article.articleImage.url}
+                    src={article.titleImage.url}
                     width="350"
                   />
                   <div className="flex-1 p-6">
