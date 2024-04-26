@@ -4,7 +4,6 @@ import titleImage from "../public/landingPageImg/titleImage.jpg";
 import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
-import CollectionGrid from "./components/collectionGrid";
 
 export default function Home() {
   return (
@@ -48,9 +47,6 @@ export default function Home() {
               <h1 className="text-l font-normal">
                 Unsere Geschichten und Kollektionen
               </h1>
-              <div>
-                <CollectionGrid />
-              </div>
             </div>
           </section>
         </main>
