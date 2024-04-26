@@ -15,7 +15,7 @@ export default async function Home() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center"></div>
           <div className="space-y-12">
             {stories.map((story) => (
-              <story>
+              <story key={story.sys.id}>
                 <p>{story.title}</p>
               </story>
             ))}
