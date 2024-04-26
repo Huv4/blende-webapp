@@ -4,6 +4,7 @@ import titleImage from "../public/landingPageImg/titleImage.jpg";
 import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
+import CollectionGrid from "./components/collectionGrid";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
                 <Navbar />
               </div>
             </div>
-            <div className="absolute bottom-1/3 z-10 text-white p-7 lg:bottom-1/2 dark:text-black">
+            <div className="absolute bottom-1/3 z-10 text-white p-7 md:bottom-1/2 dark:text-black">
               <h2 className="text-sm text-white font-semibold text-opacity-35 -mt-1">
                 fotokollektionen
               </h2>
@@ -47,6 +48,9 @@ export default function Home() {
               <h1 className="text-l font-normal">
                 Unsere Geschichten und Kollektionen
               </h1>
+              <div>
+                <CollectionGrid />
+              </div>
             </div>
           </section>
         </main>
