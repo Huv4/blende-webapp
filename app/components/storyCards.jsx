@@ -13,7 +13,7 @@ export default async function Home() {
       <section className="w-full pt-12">
         <div className="mx-auto container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center"></div>
-          <div className="space-y-12">
+          <div className="space-y-12 bg-black">
             {stories.map((story) => (
               <story>
                 <p>{story.title}</p>

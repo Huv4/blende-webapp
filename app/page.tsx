@@ -4,6 +4,7 @@ import titleImage from "../public/landingPageImg/titleImage.jpg";
 import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
+import StoryCards from "./components/storyCards";
 
 export default function Home() {
   return (
@@ -47,6 +48,9 @@ export default function Home() {
               <h1 className="text-l font-normal">
                 Unsere Geschichten und Kollektionen
               </h1>
+              <div>
+                <StoryCards></StoryCards>
+              </div>
             </div>
           </section>
         </main>
