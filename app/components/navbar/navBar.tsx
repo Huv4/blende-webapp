@@ -10,7 +10,7 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="w-screen p-7 text-l font-light text-white dark:text-black">
+    <nav className="w-screen p-7 text-xl font-light text-white">
       <div className="flex justify-between">
         <Logo />
         <div className="text-right">

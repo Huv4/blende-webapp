@@ -12,6 +12,7 @@ module.exports = {
       lg: "1024px",
       xl: "1964px",
     },
+    darkMode: "media",
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -20,13 +21,15 @@ module.exports = {
       deer: "#e68e51",
       salmon: "#ff4152",
       fox: "#c34e2f",
+      graylight: "#f9f9f9",
+      graydark: "#3c3c3c",
+      graymid: "#474747",
       blue: "#1fb6ff",
       purple: "#7e5bef",
       pink: "#ff49db",
       orange: "#ff7849",
       green: "#13ce66",
       yellow: "#ffc82c",
-      gray: "#8492a6",
     },
 
     extend: {

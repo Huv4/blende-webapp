@@ -9,7 +9,7 @@ import StoryCards from "./components/storyCards";
 export default function Home() {
   return (
     <>
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white dark:bg-graydark">
         <header>
           <section className="w-full h-screen flex">
             <div className="relative h-full z-0">
@@ -25,15 +25,14 @@ export default function Home() {
                 <Navbar />
               </div>
             </div>
-            <div className="absolute bottom-1/3 z-10 text-white p-7 md:bottom-1/2 dark:text-black">
-              <h2 className="text-sm text-white font-semibold text-opacity-35 -mt-1">
+            <div className="absolute bottom-1/3 z-10 text-white p-7 md:bottom-1/2 ">
+              <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
                 fotokollektionen
               </h2>
-
-              <h1 className="text-l font-normal">
+              <h1 className="text-xl font-normal">
                 Bilder die Geschichten erzählen.
               </h1>
-              <p className="text-sm text-justify font-light md:max-w-lg">
+              <p className="text-base text-justify font-light md:max-w-lg">
                 Durchstöbere unsere Kollektionen, finde neue Perspektiven und
                 lass dich von den vielfältigen Geschichten hinter jedem Bild
                 faszinieren.
@@ -43,14 +42,17 @@ export default function Home() {
           </section>
         </header>
         <main>
-          <section className="w-full h-screen flex p-7 pt-0 -mt-20 text-black dark:text-white">
+          <section className="w-full h-screen flex flex-col p-7 pt-0 -mt-20 text-black dark:text-white">
             <div>
-              <h1 className="text-l font-normal">
-                Unsere Geschichten und Kollektionen
+              <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
+                neueste
+              </h2>
+              <h1 className="text-xl font-normal">
+                Tauch ein in unsere Geschichten
               </h1>
-              <div>
-                <StoryCards></StoryCards>
-              </div>
+            </div>
+            <div className="mt-5">
+              <StoryCards></StoryCards>
             </div>
           </section>
         </main>
