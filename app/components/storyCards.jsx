@@ -10,7 +10,7 @@ export default async function Home() {
   // Function to parse and format ISO8601 date
   const formatDate = (isoDate) => {
     const parsedDate = new Date(isoDate);
-    const options = { month: "long", day: "numeric", year: "numeric" };
+    const options = { month: "long", day: "numeric" };
     return parsedDate.toLocaleDateString("de", options);
   };
 
