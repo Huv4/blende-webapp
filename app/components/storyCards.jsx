@@ -22,11 +22,13 @@ export default async function Home() {
           className="bg-graylight opacity-90 dark:bg-graymid"
         >
           <div className="relative opacity-100">
-            <h1 className="z-10">{story.title}</h1>
-            <h2>{story.photographer.name}</h2>
-            <h3>{formatDate(story.dateOfShot)}</h3>
-            <p> </p>
-            <div className="p-14">
+            <div className="ml-5 mt-5">
+              <h1 className="text-xl font-normal z-10">{story.title}</h1>
+              <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
+                {story.photographer.name}
+              </h2>
+            </div>
+            <div className="p-14 pt-4">
               <div className="bg-white p-2 shadow-md dark:bg-graylight dark:shadow-graylight">
                 <Image
                   src={story.titleImage.url}
@@ -36,6 +38,9 @@ export default async function Home() {
                   height={720}
                 ></Image>
               </div>
+              <h3 className="font-serif [writing-mode:vertical-lr]">
+                {formatDate(story.dateOfShot)}
+              </h3>
             </div>
           </div>
         </story>
