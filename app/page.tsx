@@ -1,5 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+
 import titleImage from "../public/landingPageImg/titleImage.jpg";
 import rightImage from "../public/landingPageImg/Kran.jpg";
 import leftImage from "../public/landingPageImg/Dresden.jpg";
@@ -35,6 +39,7 @@ export default function Home() {
                 paragraph="Durchstöbere unsere Kollektionen, finde neue Perspektiven und lass dich
         von den vielfältigen Geschichten hinter jedem Bild faszinieren."
                 ctaButtonText="unsere Favoriten"
+                ctaLinkText="/Favoriten"
               ></InfoText>
             </div>
           </section>
@@ -69,6 +74,7 @@ export default function Home() {
                     heading2="über uns"
                     paragraph="Wir möchten jedem Fotografen und jeder Fotografin, die Geschichten mit ihren Fotos erzählen möchte, eine Plattform dafür bieten. Gleichzeitig hoffen wir einfach, dass dir unsere Sammlungen gefallen."
                     ctaButtonText="mehr"
+                    ctaLinkText="/about"
                   ></InfoText>
                 </div>
               </div>
@@ -86,6 +92,7 @@ export default function Home() {
                     heading2="die fotograf:innen"
                     paragraph="Im klassischen Sinne ist wohl keine unserer Geschichten von einem professionellen Fotografen oder einer professionellen Fotografin abgelichtet, die sonst ihr Geld in einem Studio in der Innenstadt verdienen. Die Fotograf:innen von Blende 1.7 möchten einfach nur durch Fotografie ihrer Kreativität und ihrem Gestaltungswillen Ausdruck zu verleihen."
                     ctaButtonText="zu den Fotograf:innen"
+                    ctaLinkText="/Fotografen"
                   ></InfoText>
                 </div>
               </div>
@@ -94,12 +101,24 @@ export default function Home() {
         </main>
         <footer className="relative w-full h-full flex-col mt-20 text-center text-black dark:text-white">
           <div>
-            <CtaButton text="kontaktiere uns"></CtaButton>
+            <CtaButton
+              text="kontaktiere uns"
+              ctaLink="mailto:kontakt@blendeeinssieben.com?subject=Anfrage%20an%20Blende1.7"
+            ></CtaButton>
           </div>
           <div className="mt-20 mb-20">
             <h2 className="text-base text-black font-semibold text-opacity-35 dark:text-white dark:text-opacity-35">
               folge uns
             </h2>
+            <Link
+              href="https://www.instagram.com/blendeeinssieben?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="mt-2 text-black text-opacity-50 dark:text-white dark:text-opacity-50 hover:text-deer"
+              ></FontAwesomeIcon>
+            </Link>
           </div>
         </footer>
       </body>

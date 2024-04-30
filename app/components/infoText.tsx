@@ -6,6 +6,7 @@ interface InfoTextProps {
   heading2: string;
   paragraph: string;
   ctaButtonText: string;
+  ctaLinkText: string;
 }
 
 const infoText: React.FC<InfoTextProps> = ({
@@ -13,6 +14,7 @@ const infoText: React.FC<InfoTextProps> = ({
   heading2,
   paragraph,
   ctaButtonText,
+  ctaLinkText,
 }) => {
   return (
     <div className="text-white">
@@ -23,7 +25,7 @@ const infoText: React.FC<InfoTextProps> = ({
       <p className="text-base text-justify font-light md:max-w-lg">
         {paragraph}
       </p>
-      <CtaButton text={ctaButtonText} />
+      <CtaButton text={ctaButtonText} ctaLink={ctaLinkText} />
     </div>
   );
 };
