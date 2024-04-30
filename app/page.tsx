@@ -21,7 +21,7 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="absolute top-0.5 z-10">
+              <div className="absolute top-0.5 z-10 overflow-hidden">
                 <Navbar />
               </div>
             </div>

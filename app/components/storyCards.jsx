@@ -15,7 +15,7 @@ export default async function Home() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-2 center-items justify-items-center md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
       {stories.map((story) => (
         <story
           key={story.sys.id}
@@ -38,10 +38,10 @@ export default async function Home() {
                   height={720}
                 ></Image>
               </div>
-              <h3 className="font-serif [writing-mode:vertical-lr]">
-                {formatDate(story.dateOfShot)}
-              </h3>
             </div>
+            <h3 className="absolute right-8 bottom-14 font-serif z-10 [writing-mode:vertical-lr]">
+              {formatDate(story.dateOfShot)}
+            </h3>
           </div>
         </story>
       ))}
