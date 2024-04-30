@@ -31,8 +31,10 @@ export default async function Home() {
           </div>
           <div className="relative opacity-100 text-center">
             <div className="relative z-20 pt-10 -mb-10">
-              <h1 className="text-xl font-normal">{story.title}</h1>
-              <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
+              <h1 className="text-xl font-normal duration-700 group-hover:text-white">
+                {story.title}
+              </h1>
+              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 duration-700 delay-75 dark:text-white dark:text-opacity-35 group-hover:text-white">
                 {story.photographer.name}
               </h2>
             </div>

@@ -7,6 +7,7 @@ import leftImage from "../public/landingPageImg/Dresden_4-3.jpg";
 import Navbar from "./components/navbar/navBar";
 import InfoText from "./components/infoText";
 import StoryCards from "./components/storyCards";
+import CtaButton from "./components/ctaButton";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
         <main className="relative">
           <section className="w-full h-full flex-col p-7 pt-0 -mt-32 text-black dark:text-white">
             <div>
-              <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
+              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 dark:text-white dark:text-opacity-35">
                 neueste
               </h2>
               <h1 className="text-xl font-normal">
@@ -76,7 +77,7 @@ export default function Home() {
                 <div>
                   <Image
                     src={rightImage}
-                    alt="Menschen im Regen in einem äußerem Stadtteil von Taipei im Gegenlicht"
+                    alt="Konturen der"
                     className="h-full object-cover"
                   ></Image>
                 </div>
@@ -92,6 +93,16 @@ export default function Home() {
             </div>
           </section>
         </main>
+        <footer className="relative w-full h-full flex-col text-center text-black md:mt-40 dark:text-white">
+          <div>
+            <CtaButton text="kontaktiere uns"></CtaButton>
+          </div>
+          <div>
+            <h2 className="text-base text-black font-semibold text-opacity-35 dark:text-white dark:text-opacity-35">
+              follow
+            </h2>
+          </div>
+        </footer>
       </body>
     </>
   );
