@@ -42,7 +42,7 @@ export default function Home() {
           </section>
         </header>
         <main>
-          <section className="w-full h-screen flex flex-col p-7 pt-0 -mt-20 text-black dark:text-white">
+          <section className="w-full h-screen flex flex-col p-7 pt-0 -mt-32 text-black dark:text-white">
             <div>
               <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
                 neueste
@@ -51,7 +51,7 @@ export default function Home() {
                 Tauch ein in unsere Geschichten
               </h1>
             </div>
-            <div className="mt-5">
+            <div className="relative">
               <StoryCards></StoryCards>
             </div>
           </section>
