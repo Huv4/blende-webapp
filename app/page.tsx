@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import titleImage from "../public/landingPageImg/titleImage.jpg";
-import leftImage from "../public/landingPageImg/Kran_4-3.jpg";
-import rightImage from "../public/landingPageImg/Dresden_4-3.jpg";
+import rightImage from "../public/landingPageImg/Kran_4-3.jpg";
+import leftImage from "../public/landingPageImg/Dresden_4-3.jpg";
 import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
@@ -63,7 +63,7 @@ export default function Home() {
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute top-0 z-10 p-7 md:top-1/3">
+                <div className="absolute top-1/2 z-10 p-7">
                   <InfoText
                     heading1="Wer sind wir?"
                     heading2="über uns"
@@ -81,7 +81,7 @@ export default function Home() {
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute top-0 z-10 p-7 text-right md:top-1/2">
+                <div className="absolute top-1/2 right-0 z-10 p-7 text-right">
                   <InfoText
                     heading1="Professionelle Fotografie?"
                     heading2="die fotograf:innen"
