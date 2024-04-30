@@ -3,7 +3,6 @@ import Image from "next/image";
 import titleImage from "../public/landingPageImg/titleImage.jpg";
 import rightImage from "../public/landingPageImg/Kran_4-3.jpg";
 import leftImage from "../public/landingPageImg/Dresden_4-3.jpg";
-import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
 import InfoText from "./components/infoText";
