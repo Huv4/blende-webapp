@@ -62,7 +62,7 @@ export default function Home() {
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute top-1/2 z-10 p-7">
+                <div className="absolute top-0 md:top-1/2 z-10 p-7">
                   <InfoText
                     heading1="Wer sind wir?"
                     heading2="über uns"
@@ -80,7 +80,7 @@ export default function Home() {
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute top-1/2 right-0 z-10 p-7 text-right">
+                <div className="absolute top-0 md:top-1/2 right-0 z-10 p-7 text-right">
                   <InfoText
                     heading1="Professionelle Fotografie?"
                     heading2="die fotograf:innen"
