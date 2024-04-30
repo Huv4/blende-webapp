@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import titleImage from "../public/landingPageImg/titleImage.jpg";
-import rightImage from "../public/landingPageImg/Kran_4-3.jpg";
-import leftImage from "../public/landingPageImg/Dresden_4-3.jpg";
+import rightImage from "../public/landingPageImg/Kran.jpg";
+import leftImage from "../public/landingPageImg/Dresden.jpg";
 
 import Navbar from "./components/navbar/navBar";
 import InfoText from "./components/infoText";
@@ -63,12 +63,11 @@ export default function Home() {
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute top-0 md:top-1/2 z-10 p-7">
+                <div className="absolute bottom-10 z-10 p-7">
                   <InfoText
                     heading1="Wer sind wir?"
                     heading2="über uns"
-                    paragraph="
-                    Wir möchten jedem Fotografen und jeder Fotografin, die Geschichten mit ihren Fotos erzählen möchte, eine Plattform dafür bieten. Gleichzeitig hoffen wir einfach, dass dir unsere Sammlungen gefallen."
+                    paragraph="Wir möchten jedem Fotografen und jeder Fotografin, die Geschichten mit ihren Fotos erzählen möchte, eine Plattform dafür bieten. Gleichzeitig hoffen wir einfach, dass dir unsere Sammlungen gefallen."
                     ctaButtonText="mehr"
                   ></InfoText>
                 </div>
@@ -77,11 +76,11 @@ export default function Home() {
                 <div>
                   <Image
                     src={rightImage}
-                    alt="Konturen der"
+                    alt="Konturen der Hofkirche Dresden vor lila Sonnenuntergang."
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute top-0 md:top-1/2 right-0 z-10 p-7 text-right">
+                <div className="absolute bottom-10 right-0 z-10 p-7 text-right">
                   <InfoText
                     heading1="Professionelle Fotografie?"
                     heading2="die fotograf:innen"
@@ -93,13 +92,13 @@ export default function Home() {
             </div>
           </section>
         </main>
-        <footer className="relative w-full h-full flex-col text-center text-black md:mt-40 dark:text-white">
+        <footer className="relative w-full h-full flex-col mt-20 text-center text-black dark:text-white">
           <div>
             <CtaButton text="kontaktiere uns"></CtaButton>
           </div>
-          <div>
+          <div className="mt-20 mb-20">
             <h2 className="text-base text-black font-semibold text-opacity-35 dark:text-white dark:text-opacity-35">
-              follow
+              folge uns
             </h2>
           </div>
         </footer>

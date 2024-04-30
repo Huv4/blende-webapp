@@ -34,7 +34,7 @@ export default async function Home() {
               <h1 className="text-xl font-normal duration-700 group-hover:text-white">
                 {story.title}
               </h1>
-              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 duration-700 delay-75 dark:text-white dark:text-opacity-35 group-hover:text-white">
+              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 duration-700 delay-75 dark:text-white dark:text-opacity-35 md:group-hover:text-white">
                 {story.photographer.name}
               </h2>
             </div>
