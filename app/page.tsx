@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import titleImage from "../public/landingPageImg/titleImage.jpg";
+import leftImage from "../public/landingPageImg/Kran_4-3.jpg";
+import rightImage from "../public/landingPageImg/Dresden_4-3.jpg";
 import CtaButton from "./components/ctaButton";
 
 import Navbar from "./components/navbar/navBar";
+import InfoText from "./components/infoText";
 import StoryCards from "./components/storyCards";
 
 export default function Home() {
@@ -25,24 +28,19 @@ export default function Home() {
                 <Navbar />
               </div>
             </div>
-            <div className="absolute bottom-1/3 z-10 text-white p-7 md:bottom-1/2 ">
-              <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
-                fotokollektionen
-              </h2>
-              <h1 className="text-xl font-normal">
-                Bilder die Geschichten erzählen.
-              </h1>
-              <p className="text-base text-justify font-light md:max-w-lg">
-                Durchstöbere unsere Kollektionen, finde neue Perspektiven und
-                lass dich von den vielfältigen Geschichten hinter jedem Bild
-                faszinieren.
-              </p>
-              <CtaButton text="unsere Favoriten" />
+            <div className="absolute bottom-1/3 z-10 p-7 md:bottom-1/2">
+              <InfoText
+                heading1="Bilder die Geschichten erzählen."
+                heading2="fotokollektionen"
+                paragraph="Durchstöbere unsere Kollektionen, finde neue Perspektiven und lass dich
+        von den vielfältigen Geschichten hinter jedem Bild faszinieren."
+                ctaButtonText="unsere Favoriten"
+              ></InfoText>
             </div>
           </section>
         </header>
-        <main>
-          <section className="w-full h-screen flex flex-col p-7 pt-0 -mt-32 text-black dark:text-white">
+        <main className="relative">
+          <section className="w-full h-full flex-col p-7 pt-0 -mt-32 text-black dark:text-white">
             <div>
               <h2 className="text-base text-white font-semibold text-opacity-35 -mt-1">
                 neueste
@@ -53,6 +51,45 @@ export default function Home() {
             </div>
             <div className="relative">
               <StoryCards></StoryCards>
+            </div>
+          </section>
+          <section className="relative w-full h-full flex-col text-black md:mt-40 dark:text-white">
+            <div className="grid grid-cols-1 center-items justify-items-center md:grid-cols-2">
+              <div className="relative">
+                <div>
+                  <Image
+                    src={leftImage}
+                    alt="Kondensstreifen von Flugzeug parallel zu Kran bei Nacht"
+                    className="h-full object-cover"
+                  ></Image>
+                </div>
+                <div className="absolute top-0 z-10 p-7 md:top-1/3">
+                  <InfoText
+                    heading1="Wer sind wir?"
+                    heading2="über uns"
+                    paragraph="
+                    Wir möchten jedem Fotografen und jeder Fotografin, die Geschichten mit ihren Fotos erzählen möchte, eine Plattform dafür bieten. Gleichzeitig hoffen wir einfach, dass dir unsere Sammlungen gefallen."
+                    ctaButtonText="mehr"
+                  ></InfoText>
+                </div>
+              </div>
+              <div className="relative">
+                <div>
+                  <Image
+                    src={rightImage}
+                    alt="Menschen im Regen in einem äußerem Stadtteil von Taipei im Gegenlicht"
+                    className="h-full object-cover"
+                  ></Image>
+                </div>
+                <div className="absolute top-0 z-10 p-7 text-right md:top-1/2">
+                  <InfoText
+                    heading1="Professionelle Fotografie?"
+                    heading2="die fotograf:innen"
+                    paragraph="Im klassischen Sinne ist wohl keine unserer Geschichten von einem professionellen Fotografen oder einer professionellen Fotografin abgelichtet, die sonst ihr Geld in einem Studio in der Innenstadt verdienen. Die Fotograf:innen von Blende 1.7 möchten einfach nur durch Fotografie ihrer Kreativität und ihrem Gestaltungswillen Ausdruck zu verleihen."
+                    ctaButtonText="zu den Fotograf:innen"
+                  ></InfoText>
+                </div>
+              </div>
             </div>
           </section>
         </main>

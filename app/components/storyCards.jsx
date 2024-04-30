@@ -15,7 +15,7 @@ export default async function Home() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 row-auto gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
       {stories.map((story) => (
         <story
           key={story.sys.id}
