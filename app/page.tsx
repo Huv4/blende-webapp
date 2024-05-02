@@ -116,7 +116,7 @@ export default function Home() {
             >
               <FontAwesomeIcon
                 icon={faInstagram}
-                className="mt-2 text-black text-opacity-50 dark:text-white dark:text-opacity-50 hover:text-deer"
+                className="mt-2 text-xl text-black text-opacity-50 dark:text-white dark:text-opacity-50 hover:text-deer"
               ></FontAwesomeIcon>
             </Link>
           </div>
