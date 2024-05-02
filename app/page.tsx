@@ -98,6 +98,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <section></section>
         </main>
         <footer className="relative w-full h-full flex-col mt-20 text-center text-black dark:text-white">
           <div>
