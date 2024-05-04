@@ -101,14 +101,14 @@ export default function Home() {
           <section></section>
         </main>
         <footer className="relative w-full h-full flex-col mt-20 text-center text-black dark:text-white">
-          <div>
+          <div className="text-black text-opacity-70 dark:text-white dark:text-opacity-70">
             <CtaButton
               text="kontaktiere uns"
               ctaLink="mailto:kontakt@blendeeinssieben.com?subject=Anfrage%20an%20Blende1.7"
             ></CtaButton>
           </div>
           <div className="mt-20 mb-20">
-            <h2 className="text-base text-black font-semibold text-opacity-35 dark:text-white dark:text-opacity-35">
+            <h2 className="text-base text-black font-semibold text-opacity-70 dark:text-white dark:text-opacity-70">
               folge uns
             </h2>
             <Link
@@ -117,7 +117,7 @@ export default function Home() {
             >
               <FontAwesomeIcon
                 icon={faInstagram}
-                className="mt-2 text-xl text-black text-opacity-50 dark:text-white dark:text-opacity-50 hover:text-deer"
+                className="mt-2 text-xl text-black text-opacity-70 dark:text-white dark:text-opacity-70 hover:text-deer"
               ></FontAwesomeIcon>
             </Link>
           </div>

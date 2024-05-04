@@ -25,7 +25,9 @@ const infoText: React.FC<InfoTextProps> = ({
       <p className="text-base text-justify font-light md:max-w-lg">
         {paragraph}
       </p>
-      <CtaButton text={ctaButtonText} ctaLink={ctaLinkText} />
+      <div className="text-white text-opacity-70">
+        <CtaButton text={ctaButtonText} ctaLink={ctaLinkText} />
+      </div>
     </div>
   );
 };
