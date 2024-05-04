@@ -19,19 +19,20 @@ export default async function Home() {
       {stories.map((story) => (
         <story
           key={story.sys.id}
-          className="relative overflow-hidden mt-5 bg-graylight opacity-90 dark:bg-graymid group"
+          className="relative mt-5 overflow-hidden text-center aspect-[3/4] max-w-[540px] bg-graylight dark:bg-graymid group"
         >
-          <div className="absolute z-10 hidden md:flex opacity-0 ease-in-out duration-700 delay-75 group-hover:opacity-100">
-            <Image
-              src={story.hoverImage.url}
-              alt={story.altTextHoverImage}
-              width={540}
-              height={720}
-            ></Image>
-          </div>
-          <div className="relative opacity-100 text-center">
-            <div className="relative z-20 pt-10 -mb-10">
-              <h1 className="text-xl font-normal duration-700 group-hover:text-white">
+          <div>
+            <div className="absolute hidden -mt-10 z-10 md:flex ease-in-out duration-700 delay-75 group-hover:opacity-100">
+              <Image
+                src={story.hoverImage.url}
+                alt={story.altTextHoverImage}
+                width={540}
+                height={720}
+              ></Image>
+            </div>
+
+            <div className="relative z-20 -mb-10">
+              <h1 className="mt-10 text-xl font-normal duration-700 group-hover:text-white">
                 {story.title}
               </h1>
               <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 duration-700 delay-75 dark:text-white dark:text-opacity-35 md:group-hover:text-white">
