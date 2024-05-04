@@ -22,7 +22,7 @@ export default async function Home() {
           className="relative mt-5 overflow-hidden text-center aspect-[3/4] max-w-[540px] bg-graylight dark:bg-graymid group"
         >
           <div>
-            <div className="absolute hidden -mt-10 z-10 md:flex ease-in-out duration-700 delay-75 group-hover:opacity-100">
+            <div className="absolute hidden -mt-10 z-10 opacity-0 md:flex ease-in-out duration-700 delay-75 group-hover:opacity-100">
               <Image
                 src={story.hoverImage.url}
                 alt={story.altTextHoverImage}
