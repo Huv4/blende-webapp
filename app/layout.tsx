@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+
+import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
