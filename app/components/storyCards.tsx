@@ -1,12 +1,38 @@
 import React from "react";
-import { getAllStories } from "@/lib/api";
 import Image from "next/image";
 import Link from "next/link";
-import { draftMode } from "next/headers";
+
+import client from "../../lib/apolloClient";
+import { GET_COLLECTION_CARD } from "../../lib/queries";
+
+interface Story {
+  sys: { id: string };
+  title: string;
+  slug: string;
+  titleImage: { url: string };
+  hoverImage: { url: string };
+  photographer: { name: string };
+  dateOfShot: string;
+  altTextTitleImage: string;
+  altTextHoverImage: string;
+}
+
+const fetchStories = async (): Promise<Story[]> => {
+  try {
+    const { data } = await client.query<{
+      storyTemplateOneCollection: { items: Story[] };
+    }>({
+      query: GET_COLLECTION_CARD,
+    });
+    return data.storyTemplateOneCollection.items;
+  } catch (error) {
+    console.error("Error fetching stories:", error);
+    throw new Error("Failed to fetch stories");
+  }
+};
 
 export default async function Home() {
-  const { isEnabled } = draftMode();
-  const stories = await getAllStories();
+  const stories = await fetchStories();
   // Function to parse and format ISO8601 date
   const formatDate = (isoDate) => {
     const parsedDate = new Date(isoDate);
