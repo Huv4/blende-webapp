@@ -1,25 +1,46 @@
 import React from "react";
 import client from "../../lib/apolloClient";
-import { GET_COUNTRIES } from "../../lib/queries";
-import { Country } from "../../lib/types";
+import { GET_COLLECTION_CARD } from "../../lib/queries";
 
-const fetchCountries = async (): Promise<Country[]> => {
-  const { data } = await client.query<{ countries: Country[] }>({
-    query: GET_COUNTRIES,
-  });
-  return data.countries.slice(0, 4);
+interface Story {
+  sys: { id: string };
+  title: string;
+  slug: string;
+  titleImage: { url: string };
+  hoverImage: { url: string };
+  photographer: { name: string };
+  dateOfShot: string;
+  altTextTitleImage: string;
+  altTextHoverImage: string;
+}
+
+const fetchStories = async (): Promise<Story[]> => {
+  try {
+    const { data } = await client.query<{
+      storyTemplateOneCollection: { items: Story[] };
+    }>({
+      query: GET_COLLECTION_CARD,
+    });
+    return data.storyTemplateOneCollection.items;
+  } catch (error) {
+    console.error("Error fetching stories:", error);
+    throw new Error("Failed to fetch stories");
+  }
 };
 
 const AboutPage = async () => {
-  const countries = await fetchCountries();
-
+  const stories = await fetchStories();
   return (
     <div>
-      <h1>Countries</h1>
+      <h1>Stories</h1>
       <ul>
-        {countries.map((country) => (
-          <li key={country.code}>
-            {country.name} {country.emoji}
+        {stories.map((story) => (
+          <li key={story.sys.id}>
+            <h1>{story.title}</h1>
+            <img src={story.titleImage.url} alt={story.altTextTitleImage} />
+            <img src={story.hoverImage.url} alt={story.altTextHoverImage} />
+            <p>Photographer: {story.photographer.name}</p>
+            <p>Date of Shot: {story.dateOfShot}</p>
           </li>
         ))}
       </ul>
