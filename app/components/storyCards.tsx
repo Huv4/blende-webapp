@@ -46,7 +46,7 @@ export default async function Home() {
   return (
     <div className="grid grid-cols-1 row-auto gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
       {stories.map((story) => (
-        <story
+        <div
           key={story.sys.id}
           className="relative mt-5 overflow-hidden text-center aspect-[3/4] max-w-[540px] bg-graylight dark:bg-graymid group"
         >
@@ -83,7 +83,7 @@ export default async function Home() {
               {formatDate(story.dateOfShot)}
             </h3>
           </div>
-        </story>
+        </div>
       ))}
     </div>
   );
