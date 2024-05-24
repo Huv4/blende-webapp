@@ -4,8 +4,14 @@ import Link from "next/link";
 
 import { fetchStories } from "../../lib/fetchStoryCard";
 
-export default async function StoryCard() {
-  const stories = await fetchStories();
+export default async function StoryCard({
+  page = 1,
+  limit = 2,
+}: {
+  page: number;
+  limit: number;
+}) {
+  const stories = await fetchStories({ page, limit });
   // Function to parse and format ISO8601 date
   const formatDate = (isoDate: string): string => {
     const parsedDate = new Date(isoDate);
