@@ -17,7 +17,7 @@ const authLink = setContext((_, { headers }) => {
 const httpLink = createHttpLink({
   uri: `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
 });
-
+ 
 // Create the Apollo Client instance with the authLink and httpLink
 const client = new ApolloClient({
   link: ApolloLink.from([authLink, httpLink]),

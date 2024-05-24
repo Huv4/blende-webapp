@@ -2,36 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import client from "../../lib/apolloClient";
-import { GET_COLLECTION_CARD } from "../../lib/queries";
+import { fetchStories } from "../../lib/fetchStoryCard";
 
-interface Story {
-  sys: { id: string };
-  title: string;
-  slug: string;
-  titleImage: { url: string };
-  hoverImage: { url: string };
-  photographer: { name: string };
-  dateOfShot: string;
-  altTextTitleImage: string;
-  altTextHoverImage: string;
-}
-
-const fetchStories = async (): Promise<Story[]> => {
-  try {
-    const { data } = await client.query<{
-      storyTemplateOneCollection: { items: Story[] };
-    }>({
-      query: GET_COLLECTION_CARD,
-    });
-    return data.storyTemplateOneCollection.items;
-  } catch (error) {
-    console.error("Error fetching stories:", error);
-    throw new Error("Failed to fetch stories");
-  }
-};
-
-export default async function Home() {
+export default async function StoryCard() {
   const stories = await fetchStories();
   // Function to parse and format ISO8601 date
   const formatDate = (isoDate: string): string => {
