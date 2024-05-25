@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import clsx from "clsx";
 
 import { fetchStories } from "../../lib/fetchStoryCard";
 
@@ -11,7 +13,7 @@ const storyCards = async ({
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const limit =
-    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 2;
+    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 1;
 
   const stories = await fetchStories({ page, limit });
   // Function to parse and format ISO8601 date
@@ -66,6 +68,24 @@ const storyCards = async ({
           </div>
         </div>
       ))}
+      <div>
+        <Link
+          href={`?page=${page > 1 ? page - 1 : 1}`}
+          className={clsx(
+            "rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800",
+            page <= 1 && "pointer-events-none opacity-50"
+          )}
+        >
+          Previous
+        </Link>
+
+        <Link
+          href={`?page=${page + 1}`}
+          className="rounded border bg-gray-100 px-3 py-1 text-sm text-black"
+        >
+          Next
+        </Link>
+      </div>
     </div>
   );
 };
