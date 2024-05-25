@@ -1,16 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { fetchStories } from "../../lib/fetchStoryCard";
 
-export default async function StoryCard({
-  page = 1,
-  limit = 10,
+const storyCards = async ({
+  searchParams,
 }: {
-  page: number;
-  limit: number;
-}) {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) => {
+  const page =
+    typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
+  const limit =
+    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 2;
+
   const stories = await fetchStories({ page, limit });
   // Function to parse and format ISO8601 date
   const formatDate = (isoDate: string): string => {
@@ -66,4 +68,6 @@ export default async function StoryCard({
       ))}
     </div>
   );
-}
+};
+
+export default storyCards;

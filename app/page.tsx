@@ -13,9 +13,11 @@ import InfoText from "./components/infoText";
 import StoryCards from "./components/storyCards";
 import CtaButton from "./components/ctaButton";
 
-export default function Home() {
-  const page = 1;
-  const limit = 2;
+export default function Home({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   return (
     <>
       <body className="bg-white dark:bg-graydark">
@@ -57,7 +59,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="relative">
-              <StoryCards page={page} limit={limit}></StoryCards>
+              <StoryCards searchParams={searchParams}></StoryCards>
             </div>
           </section>
           <section className="relative w-full h-full flex-col text-black md:mt-40 dark:text-white">
