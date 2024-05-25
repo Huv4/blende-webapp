@@ -61,6 +61,7 @@ export default function Home({
             <div className="relative">
               <StoryCards searchParams={searchParams}></StoryCards>
             </div>
+            <div></div>
           </section>
           <section className="relative w-full h-full flex-col text-black md:mt-40 dark:text-white">
             <div className="grid grid-cols-1 center-items justify-items-center md:grid-cols-2">

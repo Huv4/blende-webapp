@@ -42,7 +42,7 @@ const storyCards = async ({
             </div>
 
             <div className="relative z-20 -mb-10">
-              <h1 className="mt-10 text-xl font-normal duration-700 group-hover:text-white">
+              <h1 className="mt-10 text-xl font-normal duration-700 md:group-hover:text-white">
                 {story.title}
               </h1>
               <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 duration-700 delay-75 dark:text-white dark:text-opacity-35 md:group-hover:text-white">
