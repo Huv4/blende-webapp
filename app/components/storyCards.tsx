@@ -6,7 +6,7 @@ import { fetchStories } from "../../lib/fetchStoryCard";
 
 export default async function StoryCard({
   page = 1,
-  limit = 2,
+  limit = 10,
 }: {
   page: number;
   limit: number;
