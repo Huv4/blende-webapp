@@ -1,5 +1,5 @@
 import React from "react";
-import CtaButton from "./ctaButton";
+import CtaButton from "../buttons/ctaButton";
 
 interface InfoTextProps {
   heading1: string;

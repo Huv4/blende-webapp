@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import clsx from "clsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -11,9 +10,10 @@ import rightImage from "../public/landingPageImg/Kran.jpg";
 import leftImage from "../public/landingPageImg/Dresden.jpg";
 
 import Navbar from "./components/navbar/navBar";
-import InfoText from "./components/infoText";
+import InfoText from "./components/headings/infoText";
 import StoryCards from "./components/storyCards";
-import CtaButton from "./components/ctaButton";
+import CtaButton from "./components/buttons/ctaButton";
+import CenteredHeading from "./components/headings/centeredHeading";
 
 export default function Home({
   searchParams,
@@ -52,14 +52,10 @@ export default function Home({
         </header>
         <main className="relative">
           <section className="w-full h-full flex-col p-7 pt-0 -mt-32 text-black md:-mt-10 dark:text-white">
-            <div className="text-center">
-              <h1 className="text-xl font-normal">
-                Tauch ein in unsere Geschichten
-              </h1>
-              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 dark:text-white dark:text-opacity-35">
-                neueste
-              </h2>
-            </div>
+            <CenteredHeading
+              h1="Tauch ein in unsere Geschichten"
+              h2="neueste"
+            ></CenteredHeading>
             <div className="relative md:mt-10">
               <StoryCards searchParams={searchParams}></StoryCards>
             </div>

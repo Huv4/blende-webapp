@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 
-import CtaButton from "./ctaButton";
+import CtaButton from "./buttons/ctaButton";
 
 import { fetchStories } from "../../lib/fetchStoryCard";
 
@@ -29,7 +29,7 @@ const storyCards = async ({
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto text-center">
       <div className="grid grid-cols-1 row-auto gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
         {stories.map((story) => (
           <div
@@ -89,12 +89,12 @@ const storyCards = async ({
             Next
           </Link>
         </div>
-        <div className="md:mt-10">
-          <CtaButton
-            text="entdecke alle..."
-            ctaLink="/allCollections"
-          ></CtaButton>
-        </div>
+      </div>
+      <div className="md:mt-10">
+        <CtaButton
+          text="entdecke alle..."
+          ctaLink="/allCollections"
+        ></CtaButton>
       </div>
     </div>
   );
