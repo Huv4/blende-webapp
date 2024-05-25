@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -50,20 +51,20 @@ export default function Home({
           </section>
         </header>
         <main className="relative">
-          <section className="w-full h-full flex-col p-7 pt-0 -mt-32 text-black dark:text-white">
-            <div>
-              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 dark:text-white dark:text-opacity-35">
-                neueste
-              </h2>
+          <section className="w-full h-full flex-col p-7 pt-0 -mt-32 text-black md:-mt-10 dark:text-white">
+            <div className="text-center">
               <h1 className="text-xl font-normal">
                 Tauch ein in unsere Geschichten
               </h1>
+              <h2 className="text-base text-black font-semibold text-opacity-35 -mt-1 dark:text-white dark:text-opacity-35">
+                neueste
+              </h2>
             </div>
-            <div className="relative">
+            <div className="relative md:mt-10">
               <StoryCards searchParams={searchParams}></StoryCards>
             </div>
           </section>
-          <section className="relative w-full h-full flex-col text-black md:mt-40 dark:text-white">
+          <section className="relative w-full h-full flex-col text-black md:mt-5 dark:text-white">
             <div className="grid grid-cols-1 center-items justify-items-center md:grid-cols-2">
               <div className="relative">
                 <div>
