@@ -16,16 +16,16 @@ const NavMenu = ({ isOpen }: NavMenuProps) => {
       }`}
     >
       <div className="lg:block lg:space-x-7 flex flex-col duration-900 ease-in-out">
-        <Link href="/geschichten" className="hover:text-deer">
-          Geschichten
+        <Link href="/allCollections" className="hover:text-deer">
+          Kollektionen
         </Link>
-        <Link href="/fotografen" className="hover:text-deer">
+        <Link href="/photographers" className="hover:text-deer">
           Fotographen
         </Link>
         <Link href="/about" className="hover:text-deer">
           Über uns
         </Link>
-        <Link href="/kontakt" className="hover:text-deer">
+        <Link href="/contact" className="hover:text-deer">
           Kontakt
         </Link>
       </div>
