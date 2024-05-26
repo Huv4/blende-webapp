@@ -18,6 +18,7 @@ const about = () => {
             </div>
           </section>
         </main>
+        <footer></footer>
       </body>
     </>
   );

@@ -18,6 +18,7 @@ const photographers = () => {
             </div>
           </section>
         </main>
+        <footer></footer>
       </body>
     </>
   );

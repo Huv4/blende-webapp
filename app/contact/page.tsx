@@ -18,6 +18,7 @@ const contact = () => {
             </div>
           </section>
         </main>
+        <footer></footer>
       </body>
     </>
   );

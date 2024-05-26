@@ -24,12 +24,8 @@ module.exports = {
       graylight: "#f9f9f9",
       graydark: "#3c3c3c",
       graymid: "#474747",
-      blue: "#1fb6ff",
-      purple: "#7e5bef",
-      pink: "#ff49db",
-      orange: "#ff7849",
-      green: "#13ce66",
-      yellow: "#ffc82c",
+      imagegray: "#91a3ab",
+      imagegreen: "#242b2a",
     },
 
     extend: {
