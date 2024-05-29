@@ -1,17 +1,6 @@
 import client from "./apolloClient";
 import { GET_COLLECTION_CARD } from "./queries";
-
-interface Story {
-  sys: { id: string };
-  title: string;
-  slug: string;
-  titleImage: { url: string };
-  hoverImage: { url: string };
-  photographer: { name: string };
-  dateOfShot: string;
-  altTextTitleImage: string;
-  altTextHoverImage: string;
-}
+import { Story } from "@/app/types/interfaces";
 
 export const fetchStories = async ({
   page = 1,

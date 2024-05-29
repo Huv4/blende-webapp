@@ -11,7 +11,7 @@ import leftImage from "../public/landingPageImg/Dresden.jpg";
 
 import Navbar from "./components/navbar/navBar";
 import InfoText from "./components/headings/infoText";
-import StoryCards from "./components/storyCards";
+import StoryCards from "./components/storyCard";
 import CtaButton from "./components/buttons/ctaButton";
 import CenteredHeading from "./components/headings/centeredHeading";
 import GradientBottom from "./components/styleElements/gradientBottom";
