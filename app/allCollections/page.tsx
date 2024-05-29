@@ -23,12 +23,12 @@ const allCollections = async ({
 
   return (
     <>
-      <body className="bg-white dark:bg-graydark">
+      <body className="bg-white dark:bg-graydark  text-black dark:text-white">
         <header>
           <section className="w-full flex"></section>
         </header>
         <main className="realtive">
-          <section className="w-full h-full flex-col p-7 pt-0 text-black dark:text-white">
+          <section className="w-full h-full flex-col p-7 pt-0">
             <div className="mt-20">
               <CenteredHeading
                 h1="Entdecke alle unsere Kollektionen"
