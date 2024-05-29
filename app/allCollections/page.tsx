@@ -8,18 +8,19 @@ import CtaButton from "../components/buttons/ctaButton";
 import StoryCard from "../components/storyCard";
 
 import { fetchStories } from "../../lib/fetchStoryCard";
+import { Story } from "../types/interfaces";
 
-const allCollections = async ({
-  searchParams,
-}: {
+interface allCollectionsProps {
   searchParams: { [key: string]: string | string[] | undefined };
-}) => {
+}
+
+const allCollections = async ({ searchParams }: allCollectionsProps) => {
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const limit =
     typeof searchParams.limit === "string" ? Number(searchParams.limit) : 6;
 
-  const stories = await fetchStories({ page, limit });
+  const stories: Story[] = await fetchStories({ page, limit });
 
   return (
     <>
