@@ -23,59 +23,54 @@ const allCollections = async ({ searchParams }: allCollectionsProps) => {
   const stories: Story[] = await fetchStories({ page, limit });
 
   return (
-    <>
-      <body className="bg-white dark:bg-graydark  text-black dark:text-white">
-        <header>
-          <section className="w-full flex"></section>
-        </header>
-        <main className="realtive">
-          <section className="w-full h-full flex-col p-7 pt-0">
-            <div className="mt-20">
-              <CenteredHeading
-                h1="Entdecke alle unsere Kollektionen"
-                h2="eintauchen"
-              ></CenteredHeading>
-            </div>
-          </section>
-          <section>
-            <div className="max-w-5xl mx-auto text-center">
-              <div className="grid grid-cols-1 row-auto gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
-                {stories.map((story) => (
-                  <StoryCard key={story.sys.id} story={story}></StoryCard>
-                ))}
-                <div>
-                  <Link
-                    href={`?page=${page > 1 ? page - 1 : 1}`}
-                    className={clsx(
-                      "rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800",
-                      page <= 1 && "pointer-events-none opacity-50"
-                    )}
-                  >
-                    Previous
-                  </Link>
+    <div className="bg-white dark:bg-graydark text-black dark:text-white">
+      <header>
+        <section className="w-full flex"></section>
+      </header>
+      <main className="relative">
+        <section className="w-full h-full flex-col p-7 pt-0">
+          <div className="mt-20">
+            <CenteredHeading
+              h1="Entdecke alle unsere Kollektionen"
+              h2="eintauchen"
+            />
+          </div>
+        </section>
+        <section>
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="grid grid-cols-1 row-auto gap-2 center-items justify-items-center md:grid-cols-2 lg:grid-cols-3">
+              {stories.map((story) => (
+                <StoryCard key={story.sys.id} story={story} />
+              ))}
+              <div>
+                <Link
+                  href={`?page=${page > 1 ? page - 1 : 1}`}
+                  className={clsx(
+                    "rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800",
+                    page <= 1 && "pointer-events-none opacity-50"
+                  )}
+                >
+                  Previous
+                </Link>
 
-                  <Link
-                    href={`?page=${page + 1}`}
-                    className="rounded border bg-gray-100 px-3 py-1 text-sm text-black"
-                  >
-                    Next
-                  </Link>
-                </div>
-              </div>
-              <div className="md:mt-10">
-                <CtaButton
-                  text="entdecke alle..."
-                  ctaLink="/allCollections"
-                ></CtaButton>
+                <Link
+                  href={`?page=${page + 1}`}
+                  className="rounded border bg-gray-100 px-3 py-1 text-sm text-black"
+                >
+                  Next
+                </Link>
               </div>
             </div>
-          </section>
-        </main>
-        <footer>
-          <GradientBottom></GradientBottom>
-        </footer>
-      </body>
-    </>
+            <div className="md:mt-10">
+              <CtaButton text="entdecke alle..." ctaLink="/allCollections" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <GradientBottom />
+      </footer>
+    </div>
   );
 };
 
