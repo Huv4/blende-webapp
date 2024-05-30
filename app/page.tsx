@@ -11,16 +11,18 @@ import leftImage from "../public/landingPageImg/Dresden.jpg";
 
 import Navbar from "./components/navbar/navBar";
 import InfoText from "./components/headings/infoText";
-import StoryCards from "./components/storyCard";
+import StoryCard from "./components/storyCard";
 import CtaButton from "./components/buttons/ctaButton";
 import CenteredHeading from "./components/headings/centeredHeading";
 import GradientBottom from "./components/styleElements/gradientBottom";
 
-export default function Home({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
+import { fetchStories } from "../lib/fetchStoryCard";
+import { Story } from "./types/interfaces";
+
+const Home = async () => {
+  const page = 1;
+  const limit = 1;
+  const stories: Story[] = await fetchStories({ page, limit });
   return (
     <>
       <body className="bg-white dark:bg-graydark">
@@ -57,8 +59,12 @@ export default function Home({
               h1="Tauch ein in unsere Geschichten"
               h2="neueste"
             ></CenteredHeading>
-            <div className="relative md:mt-10">
-              <StoryCards searchParams={searchParams}></StoryCards>
+            <div className="grid grid-cols-1 row-auto gap-2 center-items justify-items-center md:grid-cols-2 md:mt-10 lg:grid-cols-3">
+              {stories.map((story) => (
+                <div key={story.sys.id}>
+                  <StoryCard story={story}></StoryCard>
+                </div>
+              ))}
             </div>
           </section>
           <section className="relative w-full h-full flex-col text-black md:mt-5 dark:text-white">
@@ -129,4 +135,6 @@ export default function Home({
       </body>
     </>
   );
-}
+};
+
+export default Home;
