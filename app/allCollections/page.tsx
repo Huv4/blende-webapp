@@ -4,8 +4,8 @@ import clsx from "clsx";
 
 import CenteredHeading from "../components/headings/centeredHeading";
 import GradientBottom from "../components/styleElements/gradientBottom";
-import CtaButton from "../components/buttons/ctaButton";
 import StoryCard from "../components/storyCard";
+import Search from "../components/search/search";
 
 import { fetchStories } from "../../lib/fetchStoryCard";
 import { Story } from "../types/interfaces";
@@ -24,7 +24,7 @@ const allCollections = async ({ searchParams }: allCollectionsProps) => {
 
   return (
     <>
-      <body className="bg-white dark:bg-graydark  text-black dark:text-white">
+      <body className="bg-white dark:bg-graydark text-black dark:text-white">
         <header>
           <section className="w-full flex"></section>
         </header>
@@ -36,6 +36,9 @@ const allCollections = async ({ searchParams }: allCollectionsProps) => {
                 h2="eintauchen"
               ></CenteredHeading>
             </div>
+          </section>
+          <section className="flex justify-center pl-7 pr-7">
+            <Search></Search>
           </section>
           <section>
             <div className="max-w-5xl mx-auto text-center">

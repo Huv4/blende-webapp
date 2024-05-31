@@ -40,6 +40,9 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
       },
+      boxShadow: {
+        "inner-custom": "inset 0 2px 4px 0 rgba(255, 255, 255, 0.06)",
+      },
     },
   },
 };

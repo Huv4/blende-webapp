@@ -83,7 +83,7 @@ const Home = async () => {
                     className="h-full object-cover"
                   ></Image>
                 </div>
-                <div className="absolute bottom-10 z-10 p-7">
+                <div className="absolute bottom-10 left-0 z-10 p-7 text-left">
                   <InfoText
                     heading1="Wer sind wir?"
                     heading2="über uns"
