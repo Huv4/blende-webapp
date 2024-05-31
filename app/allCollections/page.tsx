@@ -45,30 +45,24 @@ const allCollections = async ({ searchParams }: allCollectionsProps) => {
                     <StoryCard story={story}></StoryCard>
                   </div>
                 ))}
-                <div>
-                  <Link
-                    href={`?page=${page > 1 ? page - 1 : 1}`}
-                    className={clsx(
-                      "rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800",
-                      page <= 1 && "pointer-events-none opacity-50"
-                    )}
-                  >
-                    Previous
-                  </Link>
-
-                  <Link
-                    href={`?page=${page + 1}`}
-                    className="rounded border bg-gray-100 px-3 py-1 text-sm text-black"
-                  >
-                    Next
-                  </Link>
-                </div>
               </div>
-              <div className="md:mt-10">
-                <CtaButton
-                  text="entdecke alle..."
-                  ctaLink="/allCollections"
-                ></CtaButton>
+              <div>
+                <Link
+                  href={`?page=${page > 1 ? page - 1 : 1}`}
+                  className={clsx(
+                    "rounded border bg-gray-100 px-3 py-1 text-sm text-gray-800",
+                    page <= 1 && "pointer-events-none opacity-50"
+                  )}
+                >
+                  Previous
+                </Link>
+
+                <Link
+                  href={`?page=${page + 1}`}
+                  className="rounded border bg-gray-100 px-3 py-1 text-sm text-black"
+                >
+                  Next
+                </Link>
               </div>
             </div>
           </section>

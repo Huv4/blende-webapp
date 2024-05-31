@@ -53,7 +53,7 @@ const Home = async () => {
             </div>
           </section>
         </header>
-        <main className="relative">
+        <main className="relative text-center">
           <section className="w-full h-full flex-col p-7 pt-0 -mt-32 text-black md:-mt-10 dark:text-white">
             <CenteredHeading
               h1="Tauch ein in unsere Geschichten"
@@ -65,6 +65,12 @@ const Home = async () => {
                   <StoryCard story={story}></StoryCard>
                 </div>
               ))}
+            </div>
+            <div className="md:mt-10">
+              <CtaButton
+                text="entdecke alle..."
+                ctaLink="/allCollections"
+              ></CtaButton>
             </div>
           </section>
           <section className="relative w-full h-full flex-col text-black md:mt-5 dark:text-white">
