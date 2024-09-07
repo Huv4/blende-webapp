@@ -9,7 +9,7 @@ import titleImage from "../public/landingPageImg/titleImage.jpg";
 import rightImage from "../public/landingPageImg/Kran.jpg";
 import leftImage from "../public/landingPageImg/Dresden.jpg";
 
-import Navbar from "./components/navbar/navBar";
+import NavBar from "./components/navbar/navBar";
 import InfoText from "./components/headings/infoText";
 import StoryCard from "./components/storyCard";
 import CtaButton from "./components/buttons/ctaButton";
@@ -25,9 +25,12 @@ const Home = async () => {
   const stories: Story[] = await fetchStories({ page, limit });
   return (
     <>
-      <body className="bg-white dark:bg-graydark">
+      <body className="bg-white dark:bg-graydark text-xl">
         <header>
-          <section className="w-full h-screen flex">
+          <section className="w-full h-screen">
+            <div className="">
+              <NavBar />
+            </div>
             <div className="relative h-full z-0">
               <div className="h-4/5">
                 <Image
@@ -36,9 +39,6 @@ const Home = async () => {
                   className="h-full object-cover"
                   priority
                 />
-              </div>
-              <div className="absolute top-0.5 z-10 overflow-hidden">
-                <Navbar />
               </div>
             </div>
             <div className="absolute bottom-1/3 z-10 p-7 md:bottom-1/2">
@@ -137,6 +137,12 @@ const Home = async () => {
             </Link>
           </div>
           <GradientBottom></GradientBottom>
+          <Link href="https://www.flaticon.com/free-icons/shopping-online">
+            Shopping online icons created by NeXore88 - Flaticon
+          </Link>
+          <Link href="https://www.flaticon.com/free-icons/account">
+            Account icons created by Shashank Singh - Flaticon
+          </Link>
         </footer>
       </body>
     </>
