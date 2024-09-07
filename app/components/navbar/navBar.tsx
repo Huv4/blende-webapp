@@ -19,7 +19,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="top-0 w-full bg-white shadow-md z-50">
+    <div className="top-0 w-full bg-white z-50">
       <div className="flex justify-between items-center p-4">
         {/* Left side: Cart and Profile Icons */}
         <div className="flex space-x-4">
@@ -32,7 +32,7 @@ const NavBar = () => {
           <Image
             src={logo}
             alt="Blendeeinssieben Logo"
-            className="w-20 object-cover"
+            className="absolute top-5 left-1/2 transform -translate-x-1/2 w-20 object-cover"
             priority
           />
         </div>

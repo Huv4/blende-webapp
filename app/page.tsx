@@ -31,8 +31,10 @@ const Home = async () => {
             <div className="">
               <NavBar />
             </div>
-            <div className="relative h-full z-0">
-              <div className="h-4/5">
+            <div className="relative h-4/5 z-0">
+              {/* White Notch */}
+              <div className="absolute top-0 left-1/2 w-32 h-5 transform -translate-x-1/2 rounded-b-3xl z-20 bg-white"></div>
+              <div className="h-full">
                 <Image
                   src={titleImage}
                   alt="Thüringer Wald versinkt im Nebel"
