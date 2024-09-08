@@ -18,7 +18,7 @@ const blogPostCard: React.FC<InfoTextProps> = ({
       <Image
         src={blogDummy}
         alt="Sraße in Norwegen."
-        className="w-full max-h-[50vh] object-cover rounded-3xl"
+        className="w-full max-h-[75vh] object-cover rounded-3xl"
       ></Image>
       <div className="absolute bg-white top-1/2 transform -translate-y-1/2 p-5 mr-16 rounded-r-3xl">
         <h1 className="mt-2 font-regular">

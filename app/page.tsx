@@ -43,7 +43,7 @@ const Home = async () => {
                   priority
                 />
               </div>
-              <div className="absolute bottom-1/2 transform translate-y-1/2 z-10 p-4 md:bottom-1/2">
+              <div className="absolute bottom-1/2 transform translate-y-1/2 z-10 p-4 md:p-32 md:bottom-1/2 md:max-w-7xl">
                 <HeadingField
                   ctaButtonText="Shop now"
                   ctaLinkText=""
@@ -61,7 +61,7 @@ const Home = async () => {
                 </div>
               ))}
             </div>
-            <div className="">
+            <div className="mt-10">
               <CtaButton text="Alle Kollektionen" ctaLink=""></CtaButton>
             </div>
           </section>
@@ -78,7 +78,7 @@ const Home = async () => {
                 className="h-full object-cover"
               ></Image>
             </div>
-            <div className="absolute p-4">
+            <div className="absolute p-4 md:p-32 md:max-w-7xl">
               <TransparentBox
                 ctaButtonText="Fotograf:innen"
                 ctaLinkText=""
