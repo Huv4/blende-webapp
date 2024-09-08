@@ -22,7 +22,7 @@ const blogPostCard: React.FC<InfoTextProps> = ({
       ></Image>
       <div className="absolute bg-white top-1/2 transform -translate-y-1/2 p-5 mr-16 rounded-r-3xl">
         <h1 className="mt-2 font-regular">
-          <span className="font-semibold text-deer">Arne's</span> Geschichte
+          <span className="font-semibold text-deer">Arnes</span> Geschichte
           hinter Norwegen.
         </h1>
         <p className="text-base font-light mt-2">
