@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
 
-import CenteredHeading from "../components/headings/centeredHeading";
+import CenteredHeading from "../components/boxes/centeredHeading";
 import GradientBottom from "../components/styleElements/gradientBottom";
 import StoryCard from "../components/storyCard";
 import Search from "../components/search/search";

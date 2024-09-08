@@ -1,5 +1,5 @@
 import React from "react";
-import CenteredHeading from "../components/headings/centeredHeading";
+import CenteredHeading from "../components/boxes/centeredHeading";
 
 const about = () => {
   return (
