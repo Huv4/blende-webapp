@@ -26,7 +26,7 @@ const Home = async () => {
   const stories: Story[] = await fetchStories({ page, limit });
   return (
     <>
-      <body className="relative bg-white text-2xl">
+      <body className="relative bg-white text-lg md:text-2xl">
         <header>
           <section className="w-full h-screen">
             <div className="">
@@ -43,7 +43,7 @@ const Home = async () => {
                   priority
                 />
               </div>
-              <div className="absolute bottom-1/2 transform translate-y-1/2 z-10 p-4 md:p-32 md:bottom-1/2 md:max-w-7xl">
+              <div className="absolute w-full left-1/2 bottom-1/2 transform -translate-x-1/2 translate-y-1/2 z-10 p-4 md:p-32 md:max-w-7xl">
                 <HeadingField
                   ctaButtonText="Shop now"
                   ctaLinkText=""
@@ -53,7 +53,7 @@ const Home = async () => {
           </section>
         </header>
         <main className="relative">
-          <section className="h-full w-full flex flex-col items-center justify-center p-4 pt-0 -mt-16">
+          <section className="h-full w-full flex flex-col items-center justify-center p-4 pt-0 -mt-16 md:mt-0">
             <div className="grid grid-cols-1 row-auto gap-2 md:grid-cols-2 lg:grid-cols-3">
               {stories.map((story) => (
                 <div key={story.sys.id}>
