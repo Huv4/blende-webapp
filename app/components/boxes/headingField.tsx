@@ -1,8 +1,10 @@
 import React from "react";
+
 import CtaButton from "../buttons/ctaButton";
 import Image from "next/image";
 
 import cafeImg from "./../../../public/carouselImg/nathan-dumlao-zUNs99PGDg0-unsplash (1).jpg";
+import RotatingTextImage from "../styleElements/rotatingTextImage";
 
 interface InfoTextProps {
   ctaButtonText: string;
@@ -16,6 +18,9 @@ const TextandImage: React.FC<InfoTextProps> = ({
   return (
     <div className="grid grid-cols-2 gap-2 bg-white rounded-3xl p-5">
       <div className="flex items-center">
+        <div>
+          <RotatingTextImage></RotatingTextImage>
+        </div>
         <h1 className=" font-regular whitespace-pre-line">
           Gestalte dein <span className="font-semibold text-deer">Café</span>.
           <br />

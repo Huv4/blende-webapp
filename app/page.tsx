@@ -119,6 +119,12 @@ const Home = async () => {
           </div>
           <div className="mt-5">
             <PhotoCredit
+              authorLink="https://unsplash.com/@jckbck?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              authorText="Jakub Dziubak"
+              siteLink="https://unsplash.com/photos/shallow-focus-photography-of-coffee-late-in-mug-on-table-zUNs99PGDg0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              siteText="Unsplash"
+            ></PhotoCredit>
+            <PhotoCredit
               authorLink="https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
               authorText="Nathan Dumlao"
               siteLink="https://unsplash.com/photos/shallow-focus-photography-of-coffee-late-in-mug-on-table-zUNs99PGDg0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
