@@ -9,13 +9,14 @@ import titleImage from "../public/landingPageImg/titleImage.jpg";
 import rightImage from "../public/landingPageImg/Kran.jpg";
 import leftImage from "../public/landingPageImg/Dresden.jpg";
 
-import NavBar from "./components/navbar/navBar";
+import NavBar from "./components/navBar";
 import HeadingField from "./components/boxes/headingField";
 import StoryCard from "./components/storyCard";
 import TransparentBox from "./components/boxes/transparentBox";
 import CtaButton from "./components/buttons/ctaButton";
 import BlogPostCard from "./components/boxes/blogPostCard";
 import GradientBottom from "./components/styleElements/gradientBottom";
+import PhotoCredit from "./components/styleElements/photoCredit";
 
 import { fetchStories } from "../lib/fetchStoryCard";
 import { Story } from "./types/interfaces";
@@ -102,7 +103,7 @@ const Home = async () => {
             </div>
           </section>
         </main>
-        <footer className="relative text-xs w-full h-full flex-col mt-16 mb-5 text-center">
+        <footer className="relative text-xs text-gray-600 w-full h-full flex-col mt-16 mb-5 text-center">
           <div className="">
             <GradientBottom></GradientBottom>
             <h2 className="mt-5">folge uns</h2>
@@ -117,19 +118,47 @@ const Home = async () => {
             </Link>
           </div>
           <div className="mt-5">
-            <h2 className="">
-              Checkout
-              <Link href="https://www.flaticon.com" className="text-deer">
-                flaticon
-              </Link>
+            <PhotoCredit
+              authorLink="https://unsplash.com/@nate_dumlao?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              authorText="Nathan Dumlao"
+              siteLink="https://unsplash.com/photos/shallow-focus-photography-of-coffee-late-in-mug-on-table-zUNs99PGDg0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              siteText="Unsplash"
+            ></PhotoCredit>
+            <p>
+              Checkout{" "}
+              <Link
+                href="https://www.flaticon.com"
+                passHref
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Flaticon
+              </Link>{" "}
               for cool icons:
-            </h2>
-            <Link href="https://www.flaticon.com/free-icons/shopping-online">
-              Shopping online icons created by NeXore88 - Flaticon
-            </Link>
-            <Link href="https://www.flaticon.com/free-icons/account">
-              Account icons created by Shashank Singh - Flaticon
-            </Link>
+            </p>
+            <div>
+              <Link
+                href="https://www.flaticon.com/free-icons/shopping-online"
+                passHref
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shopping online icons created by NeXore88 - Flaticon
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="https://www.flaticon.com/free-icons/account"
+                passHref
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Account icons created by Shashank Singh - Flaticon
+              </Link>
+            </div>
           </div>
         </footer>
       </body>

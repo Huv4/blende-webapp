@@ -4,12 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import cart from "./../../../public/icons/commerce.png";
-import user from "./../../../public/icons/people.png";
-import burgermenu from "./../../../public/icons/burgermenu.svg";
-import logo from "./../../../public/Logos/Logo.svg";
+import cart from "./../../public/icons/commerce.png";
+import user from "./../../public/icons/people.png";
+import burgermenu from "./../../public/icons/burgermenu.svg";
+import logo from "./../../public/Logos/Logo.svg";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
