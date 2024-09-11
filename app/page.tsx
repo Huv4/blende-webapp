@@ -11,20 +11,16 @@ import leftImage from "../public/landingPageImg/Dresden.jpg";
 
 import NavBar from "./components/navBar";
 import HeadingField from "./components/boxes/headingField";
-import StoryCard from "./components/storyCard";
+import KollektionenCard from "./components/storyCard";
 import TransparentBox from "./components/boxes/transparentBox";
 import CtaButton from "./components/buttons/ctaButton";
 import BlogPostCard from "./components/boxes/blogPostCard";
 import GradientBottom from "./components/styleElements/gradientBottom";
 import PhotoCredit from "./components/styleElements/photoCredit";
 
-import { pb } from "@/lib/pocketbase";
-
+import { fetchKollektionen } from "@/lib/fetchKollektionen";
 const Home = async () => {
-  const allKollektionen = await pb.collection("Kollektion").getFullList({
-    sort: "-created",
-  });
-  console.log(allKollektionen);
+  const kollektionen = await fetchKollektionen();
   return (
     <>
       <body className="relative bg-white text-lg md:text-2xl">
@@ -55,11 +51,17 @@ const Home = async () => {
         </header>
         <main className="relative">
           <section className="h-full w-full flex flex-col items-center justify-center p-4 pt-0 -mt-16 md:mt-0">
-            <ul>
-              {allKollektionen.map((post) => (
-                <li key={post.id}>{post.Name_der_Kollektion}</li>
+            <div className="grid grid-cols-1 row-auto gap-2 md:grid-cols-2 lg:grid-cols-3">
+              {kollektionen.map((kollektion) => (
+                <div key={kollektion.id}>
+                  <KollektionenCard
+                    name={kollektion.Name_der_Kollektion}
+                    url={kollektion.imageUrl}
+                    photographer={kollektion.fotograf}
+                  ></KollektionenCard>
+                </div>
               ))}
-            </ul>
+            </div>
             <div className="mt-10">
               <CtaButton text="Alle Kollektionen" ctaLink=""></CtaButton>
             </div>
@@ -171,6 +173,3 @@ const Home = async () => {
 };
 
 export default Home;
-
-// "logout" the last authenticated account
-pb.authStore.clear();
