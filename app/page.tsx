@@ -19,6 +19,7 @@ import GradientBottom from "./components/styleElements/gradientBottom";
 import PhotoCredit from "./components/styleElements/photoCredit";
 
 import { fetchKollektionen } from "@/lib/fetchKollektionen";
+
 const Home = async () => {
   const kollektionen = await fetchKollektionen();
   return (
@@ -57,7 +58,7 @@ const Home = async () => {
                   <KollektionenCard
                     name={kollektion.Name_der_Kollektion}
                     url={kollektion.imageUrl}
-                    photographer={kollektion.fotograf}
+                    photographer={kollektion.expand?.Name_Fotograf.Name}
                   ></KollektionenCard>
                 </div>
               ))}
