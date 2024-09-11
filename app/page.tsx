@@ -18,13 +18,13 @@ import BlogPostCard from "./components/boxes/blogPostCard";
 import GradientBottom from "./components/styleElements/gradientBottom";
 import PhotoCredit from "./components/styleElements/photoCredit";
 
-import { fetchStories } from "../lib/fetchStoryCard";
-import { Story } from "./types/interfaces";
+import { pb } from "@/lib/pocketbase";
 
 const Home = async () => {
-  const page = 1;
-  const limit = 1;
-  const stories: Story[] = await fetchStories({ page, limit });
+  const allKollektionen = await pb.collection("Kollektion").getFullList({
+    sort: "-created",
+  });
+  console.log(allKollektionen);
   return (
     <>
       <body className="relative bg-white text-lg md:text-2xl">
@@ -55,13 +55,11 @@ const Home = async () => {
         </header>
         <main className="relative">
           <section className="h-full w-full flex flex-col items-center justify-center p-4 pt-0 -mt-16 md:mt-0">
-            <div className="grid grid-cols-1 row-auto gap-2 md:grid-cols-2 lg:grid-cols-3">
-              {stories.map((story) => (
-                <div key={story.sys.id}>
-                  <StoryCard story={story}></StoryCard>
-                </div>
+            <ul>
+              {allKollektionen.map((post) => (
+                <li key={post.id}>{post.Name_der_Kollektion}</li>
               ))}
-            </div>
+            </ul>
             <div className="mt-10">
               <CtaButton text="Alle Kollektionen" ctaLink=""></CtaButton>
             </div>
@@ -173,3 +171,6 @@ const Home = async () => {
 };
 
 export default Home;
+
+// "logout" the last authenticated account
+pb.authStore.clear();

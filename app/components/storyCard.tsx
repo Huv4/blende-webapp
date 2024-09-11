@@ -1,10 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Story } from "../types/interfaces";
-
-interface StoryCardProps {
-  story: Story;
-}
 
 const storyCard: React.FC<StoryCardProps> = ({ story }) => {
   return (

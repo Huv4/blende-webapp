@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.4",
-    "@contentful/live-preview": "^3.3.0",
-    "@contentful/rich-text-react-renderer": "^15.19.6",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
@@ -20,7 +17,6 @@
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "clsx": "^2.1.1",
-    "graphql": "^16.8.1",
     "next": "^14.2.3",
     "pocketbase": "^0.21.5",
     "react": "^18",
